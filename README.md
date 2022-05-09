@@ -9,7 +9,7 @@ A Flutter package of drawing board.
 <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5bcc0gy"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="FlutterCandies" title="FlutterCandies"></a>
 
 ### My Changes
-Now points are drawable
+Single clicks will paint a circle
 
 ### 现已支持笔触绘制
 <img src="https://raw.githubusercontent.com/xSILENCEx/flutter_drawing_board/master/preview/an.gif" height=400>
