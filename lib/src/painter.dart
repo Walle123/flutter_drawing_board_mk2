@@ -68,6 +68,16 @@ class _PainterState extends State<Painter> {
     widget.drawingController.endDraw();
     widget.drawingCallback?.call(false);
   }
+  ///Drawing single Points
+  void _onTapUp(TapUpDetails tud){
+    if(widget.drawingController.getType==PaintType.simpleLine) {
+      widget.drawingController.startDraw(tud.localPosition);
+      widget.drawingController.drawing(tud.localPosition);
+      widget.drawingController.endDraw();
+      widget.drawingCallback?.call(true);
+      widget.drawingCallback?.call(false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +109,7 @@ class _PainterState extends State<Painter> {
             onPanStart: count! <= 1 ? _onPanStart : null,
             onPanUpdate: count <= 1 ? _onPanUpdate : null,
             onPanEnd: count <= 1 ? _onPanEnd : null,
+            onTapUp: count <= 1 ? _onTapUp : null,
           );
         },
       ),
